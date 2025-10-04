@@ -208,7 +208,8 @@ section {
   bottom: 0;
 }
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -223,6 +224,8 @@ section {
     gap: 2rem;
     max-width: 600px;
     margin: 0 auto;
+    flex-wrap: wrap;
+    flex-direction: column;
   }
   .container {
     display: flex;
