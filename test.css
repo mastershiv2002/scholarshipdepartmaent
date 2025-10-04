@@ -1,0 +1,110 @@
+/* Notification Panel */
+.notification-panel {
+  position: fixed;
+  right: -375px;
+  top: 80px;
+  width: 95vw;
+  max-width: 250px;
+  height: 350px;
+  background: #333;
+  color: white;
+  padding: 0px 20px;
+  transition: 0.5s ease-in-out;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  z-index: 3000;
+}
+
+.notification-panel.active {
+  right: 5vw;
+}
+
+.close-panel {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  float: right;
+  cursor: pointer;
+}
+
+#telegramFrame {
+  width: 100%;
+  min-height: 200px;
+  height: 240px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.floating-buttons {
+  position: fixed;
+  bottom: 80px;  /* Keeps buttons above footer on all devices */
+  right: 14px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+#showNotificationBtn,
+.ask-question-btn h2 {
+  pointer-events: auto;
+  font-size: 0.75rem;
+  min-width: 72px;
+  max-width: 120px;
+  width: auto;
+  line-height: 1.1;
+  padding: 8px 8px;
+  border-radius: 7px;
+  margin: 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.09);
+}
+
+#showNotificationBtn {
+  background: rgb(87,165,243);
+  border: none;
+  color: rgb(31,13,10);
+  cursor: pointer;
+  animation: pulse 0.5s infinite;
+}
+
+.ask-question-btn h2 {
+  background:rgb(87,165,243);
+  color: rgb(31,13,10);
+  text-decoration: none;
+  animation: pulse 0.5s infinite;
+}
+
+/* Tablet and Mobile adjustments */
+@media (max-width: 750px) {
+  .floating-buttons {
+    bottom: 90px;
+    right: 8px;
+    gap: 6px;
+  }
+  #showNotificationBtn,
+  .ask-question-btn h2 {
+    font-size: 0.86rem;
+    max-width: 95px;
+    padding: 4px 8px;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-buttons {
+    bottom: 110px;
+    right: 4px;
+    gap: 5px;
+  }
+  #showNotificationBtn,
+  .ask-question-btn h2 {
+    font-size: 0.83rem;
+    max-width: 74px;
+    padding: 3px 7px;
+    border-radius: 4px;
+  }
+}
